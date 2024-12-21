@@ -1,18 +1,18 @@
 
-#from flask import Flask, render_template
+from flask import Flask, render_template
 
-#app = Flask(__name__)
+# Create the app inside a function
+def create_app():
+    app = Flask(__name__)
 
-#@app.route('/')
-#def index():
-    #return render_template('index.html')
+    # Register routes
+    @app.route('/')
+    def index():
+        return render_template('index.html')
 
-#if __name__ == '__main__':
-    #app.run(debug=True)
+    return app
 
-from app import create_app
-
-app = create_app()
-
-if __name__ == "__main__":
+# Only run the app if this script is executed directly
+if __name__ == '__main__':
+    app = create_app()
     app.run(debug=True)
