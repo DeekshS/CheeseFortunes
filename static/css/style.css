@@ -1,0 +1,110 @@
+/* Basic styles for the body and container */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #f3c300;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styles for the magic cheese ball and input section */
+#cheese-ball img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f9c300;  /* Cheese color */
+    margin-bottom: 20px;
+}
+
+
+
+#question-box {
+    margin-bottom: 20px;
+}
+
+#question-box input {
+    padding: 10px;
+    width: 80%;
+    border: 2px solid #f3c300;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#ask-cheese-button {
+    padding: 10px 20px;
+    background-color: #f3c300;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+#ask-cheese-button:hover {
+    background-color: #e6b100;
+}
+
+/* Answer box */
+#answer-box {
+    margin-top: 20px;
+}
+
+.fortune-message {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+footer a {
+    color: #f3c300;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Define the shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply shake to the cheese ball image when it is active */
+#cheese-ball.shake img {
+    animation: shake 0.5s ease;
+}
+

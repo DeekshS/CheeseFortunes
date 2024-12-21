@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Cheese Ball</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧀 Magic Cheese Ball 🧀</h1>
+            <p>Ask the Cheese Ball your question and get a cheesy answer!</p>
+        </header>
+        
+        <main>
+            <div id="cheese-ball">
+                <img src="{{ url_for('static', filename='images/cheese-ball.png') }}" alt="Magic Cheese Ball">
+            </div>
+            <div id="question-box">
+                <input type="text" id="question" placeholder="Ask the Magic Cheese Ball...">
+                <button id="ask-cheese-button">Ask Cheese</button>
+            </div>
+            <div id="answer-box">
+                <p id="answer" class="fortune-message">Shake me for your cheesy answer!</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Check out more cheesy fun at <a href="https://cheesecompiler.onrender.com/">Cheese Compiler</a>!</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
